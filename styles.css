@@ -1,0 +1,55 @@
+.navbar-brand.abs
+{
+    position: absolute;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.navbar {
+    height: 100px !important; /*i assume your navbar size 100px*/
+}
+
+.dotted-border-left-bottom{
+    border-left-style: dashed;
+    border-bottom-style: dashed;
+    border-color: #adb5bd;
+}
+
+.dotted-border-right-bottom{
+    border-right-style: dashed;
+    border-bottom-style: dashed;
+    border-color: #adb5bd;
+}
+
+.dotted-bottom{
+    border-bottom-style: dashed;
+    border-color: #adb5bd;
+}
+
+.bg-nav{
+    background-color: #F5F5F5;
+}
+
+.bg-banner{
+    background-color: #F0F5F9;
+}
+
+.zoom{
+    transition: transform .5s;
+}
+
+.zoom:hover{
+    transform: scale(1.1);
+    color: #fff !important;
+    background-color: #0d6efd !important;
+}
+
+.color-blue{
+    color: #0d6efd !important;
+}
+
+.color-white{
+    color: #fff !important;
+}
