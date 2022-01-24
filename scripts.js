@@ -64,18 +64,7 @@ function toggleSteps(e) {
    }
 }
 
-function changeIcon(e){
-    var icon = e.target.children[0];
-    console.log(icon.classList);
-
-    if(icon.classList.contains('color-blue')){
-        icon.classList.remove('color-blue');
-        icon.classList.add('color-white');
-    }else{
-        icon.classList.add('color-blue');
-        icon.classList.remove('color-white');
-    }
-
-   console.log(e.target.children[0]);
-
+function redirect(page){
+    console.log('calleeddd');
+    window.location = "/landingPage/information.html#" + page;
 }
