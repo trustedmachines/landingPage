@@ -26,14 +26,14 @@
 </head>
 <body onload="setupAOS()" style="overflow-x: hidden" onscroll="setProgress()">
 <div class="sticky-top">
-    <nav class="navbar navbar-expand-md navbar-light bg-white">
+    <nav class="navbar navbar-expand-sm navbar-light bg-white">
         <div class="container-fluid">
             <a class="navbar-brand abs h1 m-0" href="index.html">Trusted Machines</a>
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="collapseNavbar">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
@@ -53,8 +53,8 @@
 </div>
 
 <div class="row justify-content-center bg-light p-5">
-    <div class="col">
-        <div class="col-7 offset-2">
+    <div class="col-lg col-md-12">
+        <div class="col-lg-7 col-md-12 offset-lg-2">
             <p class="display-4" data-aos="fade-up">Trusted Machines</p>
             <p class="fs-2" data-aos="fade-up" data-aos-delay="300"><small class="text-muted ">Blockchain powered</small></p>
             <i class="fas fa-ellipsis-h text-muted fa-2x" data-aos="fade-up" data-aos-delay="300"></i>
@@ -66,25 +66,25 @@
             </p>
         </div>
     </div>
-    <div class="col">
-        <div class="row">
-            <div class="col-5 shadow p-3 mb-5 bg-body rounded bg-light-blue text-center p-5 zoom" onclick="redirect('trust')">
+    <div class="col-lg col-md-12">
+        <div class="row justify-content-center">
+            <div class="col-md-5 col-sm-12 shadow p-3 mb-5 bg-body rounded bg-light-blue text-center p-md-5 p-sm-0 zoom" onclick="redirect('trust')">
                 <i class="fas fa-lock fa-3x text-primary color-blue"></i>
-                <p class="display-6 p-2 text">Trust</p>
+                <p class="fs-4 p-2 text-wrap">Trust</p>
             </div>
-            <div class="col-5 offset-1 shadow p-3 mb-5 bg-body rounded text-center p-5 zoom" onclick="redirect('automation')">
+            <div class="col-md-5 col-sm-12 offset-md-1 shadow p-3 mb-5 bg-body rounded text-center p-md-5 p-sm-0 zoom" onclick="redirect('automation')">
                 <i class="fas fa-exchange-alt fa-3x color-blue"></i>
-                <p class="display-6 p-2">Automation</p>
+                <p class="fs-4 p-2">Automation</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-5 shadow p-3 mb-5 bg-body rounded text-center p-5 zoom" onclick="redirect('resilience')">
+        <div class="row justify-content-center">
+            <div class="col-md-5 col-sm-12 shadow p-3 mb-5 bg-body rounded text-center p-md-5 p-sm-0 zoom" onclick="redirect('resilience')">
                 <i class="fas fa-compress-arrows-alt fa-3x color-blue"></i>
-                <p class="display-6 p-2">Resilience</p>
+                <p class="fs-4 p-2">Resilience</p>
             </div>
-            <div class="col-5 offset-1 shadow p-3 mb-5 bg-body rounded text-center p-5 zoom" onclick="redirect('traceability')">
+            <div class="col-md-5 col-sm-12 offset-md-1 shadow p-3 mb-5 bg-body rounded text-center p-md-5 p-sm-0 zoom" onclick="redirect('traceability')">
                 <i class="fas fa-link fa-3x color-blue"></i>
-                <p class="display-6 p-2">Traceability</p>
+                <p class="fs-4 p-2">Traceability</p>
             </div>
         </div>
     </div>
@@ -103,54 +103,54 @@
 </div>
 
 <div class="container mt-5 mb-5 collapse show" id="customer">
-    <div class="row justify-content-start">
-        <div class="row p-5 shadow p-3 mb-5 bg-body rounded w-75" data-aos="fade-up">
-            <div class="col text-center ">
-                <p class="text-start display-6 text-light-grey">01</p>
-                <p class="text-start display-6" >Scan the QR code</p>
-                <p class="text-start lead">
+    <div class="row justify-content-center">
+        <div class="row p-5 shadow p-3 mb-5 bg-body rounded justify-content-center" data-aos="fade-up">
+            <div class="col-lg-6 col-md-12 text-center">
+                <p class="text-lg-start display-6 text-light-grey">01</p>
+                <p class="text-lg-start display-6" >Scan the QR code</p>
+                <p class="text-lg-start lead">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
                     ut aliquip ex ea commodo consequat.
                 </p>
             </div>
-            <div class="col text-center d-flex align-items-center">
+            <div class="col-lg-4 col-md-8 text-center d-flex align-items-center">
                 <img src="img/demoQR.png" class="rounded mx-auto d-block w-50">
             </div>
         </div>
     </div>
-    <div class="row justify-content-end">
-        <div class="row p-5 shadow p-3 mb-5 bg-body rounded w-75" data-aos="fade-up" data-aos-delay="300">
-            <div class="col text-center d-flex align-items-center">
-                <img src="img/data.png" class="rounded mx-auto d-block w-75">
-            </div>
-            <div class="col text-center">
-                <p class="text-start display-6 text-light-grey">02</p>
-                <p class="text-start display-6">Fetching data </p>
-                <p class="text-start lead">
+    <div class="row justify-content-center">
+        <div class="row p-5 shadow p-3 mb-5 bg-body rounded justify-content-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-lg-6 text-center">
+                <p class="text-lg-start display-6 text-light-grey">02</p>
+                <p class="text-lg-start display-6">Fetching data </p>
+                <p class="text-lg-start lead">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
                     ut aliquip ex ea commodo consequat.
                 </p>
+            </div>
+            <div class="col-lg-4 col-md-6 pt-md-5 text-center d-flex align-items-center">
+                <img src="img/data.png" class="rounded mx-auto d-block w-100">
             </div>
         </div>
     </div>
-    <div class="row justify-content-start">
-        <div class="row p-5 shadow p-3 mb-5 bg-body rounded w-75" data-aos="fade-up" data-aos-delay="300">
-            <div class="col text-center">
-                <p class="text-start display-6 text-light-grey">03</p>
-                <p class="text-start display-6">See Locations, CO2 Emissions & more</p>
-                <p class="text-start lead">
+    <div class="row justify-content-center">
+        <div class="row p-5 shadow p-3 mb-5 bg-body rounded justify-content-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-lg-6 text-center">
+                <p class="text-lg-start display-6 text-light-grey">03</p>
+                <p class="text-lg-start display-6">See Locations, CO2 Emissions & more</p>
+                <p class="text-lg-start lead">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
                     ut aliquip ex ea commodo consequat.
                 </p>
             </div>
-            <div class="col text-center p-5 d-flex align-items-center">
-                <img src="img/graphs.png" class="rounded mx-auto d-block w-75">
+            <div class="col-lg-4 col-md-6 pt-md-5 text-center d-flex align-items-center">
+                <img src="img/graphs.png" class="rounded mx-auto d-block w-100">
             </div>
         </div>
     </div>
@@ -401,12 +401,12 @@
 <footer class="w-100 py-5 bg-light">
     <div class="container py-4">
         <div class="row gy-4 gx-5">
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-12 col-sm-12 text-md-center">
                 <h5 class="h1">Trusted Machines.</h5>
                 <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
                 <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">Trustedmachines.nl</a></p>
             </div>
-            <div class="col-lg-2 col-md-6 offset-1">
+            <div class="col-lg-2 col-md-12 col-sm-12 offset-lg-1 text-md-center text-sm-center pt-md-2 pt-sm-2">
                 <h5 class="mb-3">Quick links</h5>
                 <ul class="list-unstyled">
                     <li><a class="text-decoration-none text-muted" href="#">Home</a></li>
@@ -415,7 +415,7 @@
                     <li><a class="text-decoration-none text-muted" href="#">Contact</a></li>
                 </ul>
             </div>
-            <div class="col-lg-4 col-md-6 offset-1">
+            <div class="col-lg-4 col-md-12 col-sm-12 offset-lg-1 text-md-center text-sm-center pt-md-2">
                 <h5 class="mb-3">Contact Us</h5>
                 <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
                 <form action="#">
