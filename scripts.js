@@ -65,6 +65,5 @@ function toggleSteps(e) {
 }
 
 function redirect(page){
-    console.log('calleeddd');
-    window.location = "/landingPage/information.html#" + page;
+    window.location = "information.html#"+page;
 }
