@@ -99,7 +99,7 @@
     </div>
 </div>
 
-<div class="container mt-5 mb-5 collapse show" id="customer">
+<div class="container mt-5 mb-5 collapse " id="customer">
     <div class="row justify-content-center">
         <div class="row p-5 shadow p-3 mb-5 bg-body rounded justify-content-center" data-aos="fade-up">
             <div class="col-lg-6 col-md-12 text-center">
@@ -145,35 +145,39 @@
 </div>
 
 <!-- developer guide -->
-<div class="container mt-5 mb-5 collapse" id="developer">
+<div class="container mt-5 mb-5 collapse show" id="developer">
 
     <!-- Create product -->
-    <div class="row justify-content-start">
-        <div class="row p-5 shadow p-3 mb-5 bg-body rounded w-100" data-aos="fade-up">
-            <div class="col text-center">
+    <div class="row justify-content-center">
+        <div class="row p-md-5 p-sm-2 shadow p-3 mb-5 bg-body rounded w-100" data-aos="fade-up">
+            <div class="col-md-5 col-lg-6 col-sm-12 text-center">
                 <p class="text-start display-6 text-light-grey">01</p>
                 <p class="text-start display-6">Create Product</p>
                 <p class="text-start text-muted fs-5">Data simulator <span class="dot"></span> Ledger</p>
                 <p class="text-start lead">
-                    Create a new product and store it on the blockchain.
+                    Create a new product and store it on the blockchain. Each time a new product is created,
+                    a transaction with all product information is sent to the blockchain via a smart contract.
+                    <br>
+                    <br>
+                    Once a product is created, a unique QR-code will be generated. This QR-code will be used to
+                    redirect customers to our web application which extract all product information from the blockchain.
                 </p>
             </div>
-            <div class="col ml-5 px-5">
-                <div class="row">
-                    <div class="row">
-                        <div class="col p-0 m-0">
+            <div class="col-md-7 col-lg-6 ml-md-5 px-md-5">
+                <div class="row justify-content-center">
+                        <div class="col-md-6 col-sm-12 p-2 m-0">
                             <p class="lead p-0 m-0">AssetID</p>
-                            <p class="text-muted p-0 m-0">Increases everytime by 1 description</p>
+                            <p class="text-muted p-0 m-0">Unique identifier in the blockchain. Each entry has an unique ID.</p>
 
                             <p class="lead pt-3 m-0">AssetType</p>
-                            <p class="text-muted p-0 m-0">The type of product, i.e. description</p>
+                            <p class="text-muted p-0 m-0">The type of asset, i.e. description. Used assets: product, productAsset, machineAsset</p>
 
                             <p class="lead pt-3 m-0">ProductID</p>
                             <p class="text-muted p-0 m-0">UUID of the product, will be used by the consumer for looking up data</p>
                         </div>
-                        <div class="col p-0 m-0">
+                        <div class="col-md-6 col-sm-3 p-2 m-0">
                             <p class="lead p-0 m-0">OrderID</p>
-                            <p class="text-muted p-0 m-0">Description of the variable.</p>
+                            <p class="text-muted p-0 m-0">Corresponding order number for the product.</p>
 
                             <p class="lead pt-3 m-0">TasksPerformed</p>
                             <p class="text-muted p-0 m-0">Tasks already performed on this product.</p>
@@ -181,9 +185,9 @@
                             <p class="lead pt-3 m-0">TasksToPerform</p>
                             <p class="text-muted p-0 m-0">List of tasks which still have to be performed, i.e. drilling a hole.</p>
                         </div>
-                    </div>
+
                     <div class="row">
-                        <div class="col p-0 m-0">
+                        <div class="col-md-6 col-sm-12 p-0 m-0">
                             <p class="lead pt-5 m-0">Throws</p>
                             <p class="text-muted p-0 m-0">GatewayException, CommitException</p>
                         </div>
@@ -194,176 +198,177 @@
     </div>
 
     <!-- Request task -->
-    <div class="row justify-content-start">
-        <div class="row p-5 shadow p-3 mb-5 bg-body rounded w-100" data-aos="fade-up">
-            <div class="col text-center">
+    <div class="row justify-content-center">
+        <div class="row p-md-5 p-sm-2 shadow p-3 mb-5 bg-body rounded w-100" data-aos="fade-up">
+            <div class="col-md-6 col-sm-12 text-center">
                 <p class="text-start display-6 text-light-grey">02</p>
                 <p class="text-start display-6">Request Task</p>
                 <p class="text-start text-muted fs-5">Data simulator <span class="dot align-middle"></span> Ledger</p>
                 <p class="text-start lead">
-                    Request a task which is on the TasksToPerform list.
+                    Request the next task to be performed on the product. Based on the assetID, the product entry will
+                    be fetched. The next task will be extracted from the TasksToPerform field.
                 </p>
             </div>
-            <div class="col ml-5 px-5">
-                <div class="row">
-                    <div class="row">
-                        <div class="col p-0 m-0">
-                            <p class="lead p-0 m-0">AssetID</p>
-                            <p class="text-muted p-0 m-0">The assetID previously assigned</p>
-                        </div>
-                        <div class="col p-0 m-0">
-
-                        </div>
+            <div class="col-md-6 ml-md-5 px-md-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-sm-12 p-2 m-0">
+                        <p class="lead p-0 m-0">AssetID</p>
+                        <p class="text-muted p-0 m-0">The assetID previously assigned. Stored on the product.</p>
                     </div>
-                    <div class="row">
-                        <div class="col p-0 m-0">
-                            <p class="lead pt-5 m-0">Throws</p>
-                            <p class="text-muted p-0 m-0">EndorseException, CommitException, SubmitException, CommitStatusException</p>
-                        </div>
+                    <div class="col-md-6 col-sm-12 p-2 m-0">
                     </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-sm-12 p-2 m-0">
+                        <p class="lead pt-5 m-0">Throws</p>
+                        <p class="text-muted p-0 m-0">EndorseException, CommitException, SubmitException, CommitStatusException</p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 p-2 m-0"></div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Perform task -->
-    <div class="row justify-content-start">
-        <div class="row p-5 shadow p-3 mb-5 bg-body rounded w-100" data-aos="fade-up">
-            <div class="col text-center">
+    <div class="row justify-content-center">
+        <div class="row p-md-5 p-sm-2 shadow p-3 mb-5 bg-body rounded w-100" data-aos="fade-up">
+            <div class="col-md-6 col-sm-12 text-center">
                 <p class="text-start display-6 text-light-grey">03</p>
                 <p class="text-start display-6">Perform Task</p>
                 <p class="text-start text-muted fs-5">Data simulator</p>
                 <p class="text-start lead">
-                    Simulate a task, i.e. drilling a hole.
+                    Once a product got a task, the product will tell the machines the task needs to be performed.
+                    If a machine is idle, the product will claim this machine and lock it. Next, the task will be
+                    simulated. This concept makes this simulation product-based.
+                    <br>
+                    <br>
+                    After the task is done, four transactions will be made. The first three are machineAsset transactions.
+                    These include information about the machine (which task is performed when and where) as well as sensor data
+                    (circumstances). The fourth transaction is a productAsset transaction. This transaction includes information
+                    about which task is performed on what product by which machine.
+                    <br>
+                    <br>
+                    <i>Note: This step will be repeated until all tasks are done.</i>
                 </p>
             </div>
-            <div class="col ml-5 px-5">
-                <div class="row">
-                    <div class="row">
-                        <div class="col p-0 m-0">
-                            <p class="lead p-0 m-0">Product</p>
-                            <p class="text-muted p-0 m-0">Description of the variable.</p>
-                        </div>
-                        <div class="col p-0 m-0">
+            <div class="col-md-6 ml-md-5 px-md-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-sm-12 p-2 m-0">
+                        <p class="lead p-0 m-0">Product</p>
+                        <p class="text-muted p-0 m-0">The product on which a task needs to be performed.</p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 p-2 m-0">
 
-                        </div>
                     </div>
-                    <div class="row">
-                        <div class="col p-0 m-0">
-                            <p class="lead pt-5 m-0">Throws</p>
-                            <p class="text-muted p-0 m-0">-</p>
-                        </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-sm-12 p-2 m-0">
+                        <p class="lead pt-5 m-0">Throws</p>
+                        <p class="text-muted p-0 m-0">-</p>
                     </div>
+                    <div class="col-md-6 col-sm-12 p-2 m-0"></div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Update product -->
-    <div class="row justify-content-start">
-        <div class="row p-5 shadow p-3 mb-5 bg-body rounded w-100" data-aos="fade-up">
-            <div class="col text-center">
+    <div class="row justify-content-center">
+        <div class="row p-md-5 p-sm-2 shadow p-3 mb-5 bg-body rounded w-100" data-aos="fade-up">
+            <div class="col-md-6 col-sm-12 text-center">
                 <p class="text-start display-6 text-light-grey">04</p>
                 <p class="text-start display-6">Update Product</p>
                 <p class="text-start text-muted fs-5">Data simulator <span class="dot align-middle"></span> Ledger</p>
                 <p class="text-start lead">
-                    Update a product with the task performed.
+                    After simulating performing a task, the product will be updated in the blockchain. The task that
+                    is performed will be moved from the tasksToPerform list to the tasksPerformed list.
+                    <br>
+                    <br>
+                    <i>Note: This step will be repeated until all tasks are done.</i>
                 </p>
             </div>
-            <div class="col ml-5 px-5">
-                <div class="row">
-                    <div class="row">
-                        <div class="col p-0 m-0">
-                            <p class="lead p-0 m-0">AssetID</p>
-                            <p class="text-muted p-0 m-0">Description of the variable.</p>
+            <div class="col-md-6 ml-md-5 px-md-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-sm-12 p-2 m-0">
+                        <p class="lead p-0 m-0">AssetID</p>
+                        <p class="text-muted p-0 m-0">The assetID previously assigned. Stored on the product.</p>
 
-                            <p class="lead pt-3 m-0">Task</p>
-                            <p class="text-muted p-0 m-0">Performed task</p>
-                        </div>
-                        <div class="col p-0 m-0">
+                        <p class="lead pt-3 m-0">Task</p>
+                        <p class="text-muted p-0 m-0">Performed task.</p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 p-2 m-0">
 
-                        </div>
                     </div>
-                    <div class="row">
-                        <div class="col p-0 m-0">
-                            <p class="lead pt-5 m-0">Throws</p>
-                            <p class="text-muted p-0 m-0">EndorseException, CommitException, SubmitException, CommitStatusException</p>
-                        </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-sm-12 p-2 m-0">
+                        <p class="lead pt-5 m-0">Throws</p>
+                        <p class="text-muted p-0 m-0">EndorseException, CommitException, SubmitException, CommitStatusException</p>
                     </div>
+                    <div class="col-md-6 col-sm-12 p-2 m-0"></div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Get product info -->
-    <div class="row justify-content-start">
-        <div class="row p-5 shadow p-3 mb-5 bg-body rounded w-100" data-aos="fade-up">
-            <div class="col text-center">
+    <div class="row justify-content-center">
+        <div class="row p-md-3 p-lg-5 p-sm-2 shadow p-3 mb-5 bg-body rounded w-100" data-aos="fade-up">
+            <div class="col-md-5 col-lg-6 col-sm-12 text-center">
                 <p class="text-start display-6 text-light-grey">05</p>
                 <p class="text-start display-6">Get Product Information</p>
                 <p class="text-start text-muted fs-5">Backend <span class="dot align-middle"></span> Ledger</p>
                 <p class="text-start lead">
-                    Get product information from the API. This will return a JSON object.
+                    Get product information from the API. This will return a JSON object with all product information.
                 </p>
             </div>
-            <div class="col ml-5 px-5">
-                <div class="row">
-                    <div class="row">
-                        <div class="col p-0 m-0">
-                            <p class="lead p-0 m-0">/getProductAssets&lt;ID&gt;</p>
-                            <p class="text-muted p-0 m-0">Description of the variable.</p>
+            <div class="col-md-7 col-lg-6 ml-md-5 px-md-2 px-lg-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-sm-12 p-2 m-0">
+                        <p class="lead p-0 m-0">/getProductAssets&lt;ID&gt;</p>
+                        <p class="text-muted p-0 m-0">Get all productAssets based on UUID of the product.</p>
 
-                            <p class="lead pt-3 m-0">/getMachineAssets&lt;ID&gt;</p>
-                            <p class="text-muted p-0 m-0">Description of the variable.</p>
-                        </div>
-                        <div class="col p-0 m-0">
-                            <p class="lead p-0 m-0">/getDataByHour&lt;hour, owner&gt;</p>
-                            <p class="text-muted p-0 m-0">Description of the variable.</p>
+                        <p class="lead pt-3 m-0">/getMachineAssets&lt;ID&gt;</p>
+                        <p class="text-muted p-0 m-0">Get all machineAssets based on UUID of the product.</p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 p-2 m-0">
+                        <p class="lead p-0 m-0">/getDataByHour&lt;hour, owner&gt;</p>
+                        <p class="text-muted p-0 m-0">Get all data points (temperature or humidity) within a certain hour.</p>
 
-                            <p class="lead pt-3 m-0">/getQRCode&lt;ID&gt;</p>
-                            <p class="text-muted p-0 m-0">Generate a QR code based on the ID given.</p>
-                        </div>
+                        <p class="lead pt-3 m-0">/getQRCode&lt;ID&gt;</p>
+                        <p class="text-muted p-0 m-0">Get a QR code based on the UUID of the product.</p>
                     </div>
-                    <div class="row">
-                        <div class="col p-0 m-0">
-                            <p class="lead pt-5 m-0">Throws</p>
-                            <p class="text-muted p-0 m-0">GatewayException, ParseException</p>
-                        </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-sm-12 p-2 m-0">
+                        <p class="lead pt-5 m-0">Throws</p>
+                        <p class="text-muted p-0 m-0">GatewayException, ParseException</p>
                     </div>
+                    <div class="col-md-6 col-sm-12 p-2 m-0"></div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Display product info -->
-    <div class="row justify-content-start">
-        <div class="row p-5 shadow p-3 mb-5 bg-body rounded w-100" data-aos="fade-up">
-            <div class="col text-center">
+    <div class="row justify-content-center">
+        <div class="row p-md-5 p-sm-2 shadow p-3 mb-5 bg-body rounded w-100" data-aos="fade-up">
+            <div class="col-md-6 col-sm-12 text-center">
                 <p class="text-start display-6 text-light-grey">06</p>
                 <p class="text-start display-6">Display Product Information</p>
                 <p class="text-start text-muted fs-5">Backend <span class="dot align-middle"></span> Frontend</p>
                 <p class="text-start lead">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat.
+                    Once all data is extracted from the blockchain in the backend, the data will be displayed
+                    in our web application. Here, the customer can see alle relevant product information.
+                    <br>
+                    <br>
+                    Try it by scanning the QR-code!
                 </p>
             </div>
-            <div class="col ml-5 px-5">
-                <div class="row">
-                    <div class="row">
-                        <div class="col p-0 m-0">
-
-                        </div>
-                        <div class="col p-0 m-0">
-
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col p-0 m-0">
-                            <p class="lead pt-5 m-0">Throws</p>
-                            <p class="text-muted p-0 m-0">-</p>
-                        </div>
+            <div class="col-md-6 ml-md-5 px-md-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12 col-md-12 text-center d-flex align-items-center">
+                        <img src="img/demoQR.png" class="rounded mx-auto d-block w-50">
                     </div>
                 </div>
             </div>
